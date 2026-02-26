@@ -6,60 +6,105 @@
 <style lang="en" type="text/css" id="dark-mode-native-style"></style>
 <html lang="en">
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas' Website</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    <head>
+        body {
+            background-color: #6A7BA2;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
 
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            gap: 1.5rem;
+        }
 
-        <meta charset="UTF-8">
+        h1 {
+            font-size: 3.5rem;
+            font-style: italic;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 0.05em;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.18);
+        }
 
+        .photo-wrap img {
+            width: 560px;
+            max-width: 100%;
+            display: block;
+            border-radius: 4px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+        }
 
-        <title>Thomas' Website</title>
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.6rem;
+        }
 
+        nav a {
+            text-decoration: none;
+            color: #6A7BA2;
+            background: rgba(255,255,255,0.92);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.5rem 1.1rem;
+            border-radius: 999px;
+            transition: background 0.2s, color 0.2s, transform 0.15s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        }
 
-        <style>
-            body {top: 0; left: 0; width: 99%; height:97%;
-                position: aboslute; display: table; background-color: #6A7BA2;}
-            p {display: table-cell; vertical-align: middle; text-align: center}
-        </style>
-    </head>
+        nav a:hover {
+            background: #fff;
+            color: #4a5d87;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>THOMAS PRATT</h1>
 
+        <div class="photo-wrap">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/STS-133_Rendezvous_Pitch_Maneuver_3.jpg/1024px-STS-133_Rendezvous_Pitch_Maneuver_3.jpg"
+                alt="Space Shuttle STS-133"
+                loading="lazy"
+            >
+        </div>
 
-    <body>
-        <p>
-            <font size="7">
-                <i>
-                    <b>THOMAS PRATT</b>
-                </i>
-            </font>
-            <br>
-            <font: helvetica; font size="3">
-            <i>
-                <b></b>
-            </i>
-            <br>
-            <font\></font>
-            <br>
-            <img async src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/STS-133_Rendezvous_Pitch_Maneuver_3.jpg/1024px-STS-133_Rendezvous_Pitch_Maneuver_3.jpg" style="width:560px;">
-            <br>
-            <br>
-            <a href="https://www.threads.com/@thomas.prattt">my threads</a>
-            &emsp;
-            <a href="https://www.youtube.com/@AstroThomasPratt">my youtube</a>
-            &emsp;
-            <a href="https://medium.com/@thomasprattw">articles by me</a>
-            &emsp;
-            <a href="https://open.spotify.com/user/3d4gckgr4wwxzfmasteh81qcm?si=a441753993b247fe">my spotify</a>
-            &emsp;
-            <a href="New">movie reviews</a>
-            &emsp;
-            <a href="https://boxd.it/8E8sP">my letterboxd</a>
-            <br>
-            <br>
-            <!-- <a href="https://twitter.com/Astro_Thomas1?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-lang="en" data-show-count="false">Follow @Astro_Thomas1</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-            <br>
-            <br>
-
-    </body>
+        <nav>
+            <a href="https://www.threads.com/@thomas.prattt">My Threads</a>
+            <a href="https://www.youtube.com/@AstroThomasPratt">My YouTube</a>
+            <a href="https://medium.com/@thomasprattw">Articles</a>
+            <a href="https://open.spotify.com/user/3d4gckgr4wwxzfmasteh81qcm?si=a441753993b247fe">My Spotify</a>
+            <a href="New">Movie Reviews</a>
+            <a href="https://boxd.it/8E8sP">My Letterboxd</a>
+        </nav>
+    </div>
+</body>
+</html>
 
 
 </html>
