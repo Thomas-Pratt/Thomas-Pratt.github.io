@@ -101,6 +101,54 @@
             loading="lazy">
         </iframe>
 
+        <title>Pomodoro</title>
+        <body>
+          <div id="timeDisplay">25:00</div>
+          <button id="startButton">Start</button>
+          <button id="resetButton">Reset</button>
+          <script>
+            let time = 25 * 60; // 25 minutes in seconds
+            let timer;
+
+            const timeDisplay = document.getElementById('timeDisplay');
+            const startButton = document.getElementById('startButton');
+            const resetButton = document.getElementById('resetButton');
+
+            function updateTime() {
+              const minutes = Math.floor(time / 60);
+              const seconds = time % 60;
+              timeDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            }
+
+            function startTimer() {
+              if (!timer) {
+                timer = setInterval(() => {
+                  if (time > 0) {
+                    time--;
+                    updateTime();
+                  } else {
+                    clearInterval(timer);
+                    timer = null;
+                    alert('Time is up!');
+                  }
+                }, 1000);
+              }
+            }
+
+            function resetTimer() {
+              clearInterval(timer);
+              timer = null;
+              time = 25 * 60;
+              updateTime();
+            }
+
+            startButton.addEventListener('click', startTimer);
+            resetButton.addEventListener('click', resetTimer);
+
+            updateTime();
+          </script>
+          </body>
+
         <br><br><br><br>
 
         <a href="index">return</a>
