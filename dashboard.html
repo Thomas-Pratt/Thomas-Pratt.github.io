@@ -25,6 +25,17 @@
         img {
             height: 100px;
         }
+
+        pomo {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-height: 150px;
+          background: #7a81c5;
+          font-family: Arial, sans-serif;
+        }
+
     </style>
 </head>
 
@@ -97,7 +108,7 @@
         </iframe>
 
         <title>Pomodoro</title>
-        <body>
+        <pomo>
           <div id="timeDisplay">25:00</div>
           <button id="startButton">Start</button>
           <button id="resetButton">Reset</button>
@@ -142,7 +153,7 @@
 
             updateTime();
           </script>
-          </body>
+          </pomo>
 
         <br><br><br><br>
 
