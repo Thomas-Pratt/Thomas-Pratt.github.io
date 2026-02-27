@@ -125,6 +125,7 @@
 
         <title>Pomodoro</title>
         <pomo>
+          <div id="stars"></div>
           <div id="timeDisplay">25:00</div>
           <button id="startButton">Start</button>
           <button id="resetButton">Reset</button>
@@ -178,6 +179,14 @@
             resetButton.addEventListener('click', resetTimer);
 
             updateTime();
+
+            let sessions = 0;
+
+            function addStar() {
+            sessions++;
+            const stars = document.getElementById('stars');
+            stars.textContent += '⭐'; // just appends another star emoji
+            }
           </script>
           </pomo>
 
