@@ -142,6 +142,19 @@
               timeDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
             }
 
+            function startTimer() {
+              timer = setInterval(() => {
+                if (time > 0) {
+                  time--;
+                  updateTime();
+                } else {
+                  clearInterval(timer);
+                  timer = null;
+                  alert('Time is up!');
+                }
+              }, 1000);
+            }
+
            function toggleTimer() {
              if (timer) {
                  // it's running, so pause it
@@ -160,7 +173,7 @@
               time = 25 * 60;
               updateTime();
             }
-
+            
             startButton.addEventListener('click', toggleTimer);
             resetButton.addEventListener('click', resetTimer);
 
