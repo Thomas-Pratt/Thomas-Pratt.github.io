@@ -1,189 +1,109 @@
 <!DOCKTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thomas Dashboard of Knowledge</title>
+
     <link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
     <link type="text/css" rel="stylesheet" id="dark-mode-general-link">
-    <style lang="en" type="text/css" id="dark-mode-custom-style"></style>
-    <style lang="en" type="text/css" id="dark-mode-native-style"></style>
-    <html lang="en">
+    <style id="dark-mode-custom-style"></style>
+    <style id="dark-mode-native-style"></style>
 
+    <style>
+        body {
+            top: 0;
+            left: 0;
+            width: 99%;
+            height: 97%;
+            position: absolute;
+            display: table;
+            background-color: #6A7BA2;
+        }
 
-    <head>
-        <meta charset="UTF-8">
+        p {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
 
+        img {
+            height: 100px;
+        }
+    </style>
+</head>
 
-        <title>Thomas Dashboard of Knowledge</title>
+<body>
+    <p>
+        <h1>WELCOME TO THOMAS'S DASHBOARD</h1>
 
+        <br><br>
 
+        <a href="https://login.iastate.edu" target="_blank">
+            <img src="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/isuni.sidearmsports.com/images/nextgen_2024/logo_main.svg" alt="ISU Logo">
+        </a>
 
-        <style>
-            
-            body {top: 0; left: 0; width: 99%; height:97%;
-                position: aboslute; display: table; background-color: #6A7BA2;}
-            p {display: table-cell; vertical-align: middle; text-align: center}
+        &emsp;
 
-                </style>
-            <body>
-                <p>
-                    <br>
-                    <br>
-                    <h1>WELCOME TO THOMAS'S DASHBOARD</h1>
-                    <br>
-                    <br>
-                    <a href="https://login.iastate.edu" target="blank">
-                        <img src="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/isuni.sidearmsports.com/images/nextgen_2024/logo_main.svg" alt="ISU Logo" style="height: 100px;">
-                      </a>
-                    &emsp;
-                    <a href="https://canvas.iastate.edu/" target="blank">
-                        <img src="https://www.instructure.com/sites/default/files/image/2021-12/Canvas_logo_single_mark.png" alt="canvaslogo" style="height: 100px;">
-                      </a>
-                    &emsp;
-                    <a href="https://youtube.com" target="blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/YouTube_full-color_icon_%282024%29.svg/2880px-YouTube_full-color_icon_%282024%29.svg.png" alt="youtubelogo" style="height: 100px;">
-                      </a>
-                    &emsp;
-                    <a href="https://www.threads.com/@thomas.prattt" target="blank">
-                        <img src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Threads_%28app%29_logo.svg/512px-Threads_%28app%29_logo.svg.png" alt="twitterlogo" style="height: 100px;">
-                      </a>
-                    &emsp;
-                    <a href="https://letterboxd.com" target="blank">
-                        <img src="https://cdn.brandfetch.io/ido_8ZbVui/w/960/h/960/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B" alt="letterboxdlogo" style="height: 100px;">
-                      </a>
-                    &emsp;
-                    <a href="https://gmail.com" target="blank">
-                        <img src="https://images.icon-icons.com/2642/PNG/512/google_mail_gmail_logo_icon_159346.png" alt="gmaillogo" style="height: 100px;">
-                      </a>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <iframe src="https://free.timeanddate.com/clock/i9xy2o6x/n132/fn14/fs16/fcfff/tc000/ftb/pa8/tt0/tw1/th2/ta1/tb4" frameborder="0" width="225" height="55"></iframe>
-                    <br>
-                    <br>
-                    TO DO CALENDAR
-                    <br>
-                    <iframe src="https://calendar.google.com/calendar/embed?src=thomasprattw%40gmail.com&ctz=America%2FChicago" style="border:solid 1px #777" width="1000" height="600" frameborder="0" scrolling="no"></iframe>
-                    &emsp;
-                    <br>
-                    <br>
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1LJFx7jHcGh5ZH4ALxMT1x?utm_source=generator&theme=0" width="80%" height="352" frameBorder="0" allowfullscreen="false" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                    <head>
-                        <meta charset="UTF-8">
-                        <title>Timer</title>
-                        <style>
-                          body {
-                            font-family: Helvetica, sans-serif;
-                            text-align: center;
-                            padding: 30px;
-                          }
-                          #timer {
-                            font-size: 72px;
-                            font-weight: bold;
-                            margin-bottom: 20px;
-                          }
-                          button {
-                            font-size: 20px;
-                            padding: 10px 25px;
-                            margin: 5px;
-                            cursor: pointer;
-                          }
-                          input[type="number"] {
-                            font-size: 18px;
-                            padding: 5px;
-                            width: 100px;
-                          }
-                          label {
-                            font-size: 18px;
-                          }
-                        </style>
-                      </head>
-                      <body>
-                      
-                        <div id="timer">00:00:00</div>
-                      
-                        <div>
-                          <label><input type="radio" name="mode" value="up" checked onchange="setMode('up')"> Count Up</label>
-                          <label><input type="radio" name="mode" value="down" onchange="setMode('down')"> Countdown</label>
-                        </div>
-                      
-                        <div id="countdownInput" style="margin: 15px; display: none;">
-                          <label>Seconds: <input type="number" id="countdownSeconds" min="1" value="60"></label>
-                        </div>
-                      
-                        <button onclick="startTimer()">Start</button>
-                        <button onclick="pauseTimer()">Pause</button>
-                        <button onclick="resetTimer()">Reset</button>
-                      
-                        <script>
-                          let timer;
-                          let seconds = 0;
-                          let isRunning = false;
-                          let mode = 'up'; // 'up' or 'down'
-                      
-                          function updateDisplay() {
-                            const hrs = String(Math.floor(seconds / 3600)).padStart(2, '0');
-                            const mins = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
-                            const secs = String(seconds % 60).padStart(2, '0');
-                            document.getElementById("timer").textContent = `${hrs}:${mins}:${secs}`;
-                          }
-                      
-                          function startTimer() {
-                            if (isRunning) return;
-                            isRunning = true;
-                      
-                            if (mode === 'down' && seconds <= 0) {
-                              const input = document.getElementById("countdownSeconds").value;
-                              seconds = parseInt(input, 10) || 0;
-                              if (seconds <= 0) {
-                                alert("Please enter a valid countdown time.");
-                                isRunning = false;
-                                return;
-                              }
-                            }
-                      
-                            timer = setInterval(() => {
-                              if (mode === 'up') {
-                                seconds++;
-                              } else {
-                                seconds--;
-                                if (seconds <= 0) {
-                                  seconds = 0;
-                                  pauseTimer();
-                                  alert("Countdown finished!");
-                                }
-                              }
-                              updateDisplay();
-                            }, 1000);
-                          }
-                      
-                          function pauseTimer() {
-                            clearInterval(timer);
-                            isRunning = false;
-                          }
-                      
-                          function resetTimer() {
-                            pauseTimer();
-                            seconds = 0;
-                            updateDisplay();
-                          }
-                      
-                          function setMode(selectedMode) {
-                            mode = selectedMode;
-                            resetTimer();
-                            document.getElementById("countdownInput").style.display = (mode === 'down') ? "block" : "none";
-                          }
-                      
-                          updateDisplay();
-                        </script>
-                        </body>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <a href="index">return</a>
-                    <br>
-                    <br>
-                    
-                </p>
-                <body>
+        <a href="https://canvas.iastate.edu/" target="_blank">
+            <img src="https://www.instructure.com/sites/default/files/image/2021-12/Canvas_logo_single_mark.png" alt="Canvas Logo">
+        </a>
+
+        &emsp;
+
+        <a href="https://youtube.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/YouTube_full-color_icon_%282024%29.svg/2880px-YouTube_full-color_icon_%282024%29.svg.png" alt="YouTube Logo">
+        </a>
+
+        &emsp;
+
+        <a href="https://www.threads.com/@thomas.prattt" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Threads_%28app%29_logo.svg/512px-Threads_%28app%29_logo.svg.png" alt="Threads Logo">
+        </a>
+
+        &emsp;
+
+        <a href="https://letterboxd.com" target="_blank">
+            <img src="https://cdn.brandfetch.io/ido_8ZbVui/w/960/h/960/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B" alt="Letterboxd Logo">
+        </a>
+
+        &emsp;
+
+        <a href="https://gmail.com" target="_blank">
+            <img src="https://images.icon-icons.com/2642/PNG/512/google_mail_gmail_logo_icon_159346.png" alt="Gmail Logo">
+        </a>
+
+        <br><br><br><br>
+
+        <iframe 
+            src="https://free.timeanddate.com/clock/i9xy2o6x/n132/fn14/fs16/fcfff/tc000/ftb/pa8/tt0/tw1/th2/ta1/tb4" 
+            frameborder="0" width="225" height="55">
+        </iframe>
+
+        <br><br>
+
+        <strong>TO DO CALENDAR</strong>
+        <br>
+
+        <iframe 
+            src="https://calendar.google.com/calendar/embed?src=thomasprattw%40gmail.com&ctz=America%2FChicago"
+            style="border:solid 1px #777" width="1000" height="600" frameborder="0" scrolling="no">
+        </iframe>
+
+        <br><br>
+
+        <iframe 
+            style="border-radius:12px" 
+            src="https://open.spotify.com/embed/playlist/1LJFx7jHcGh5ZH4ALxMT1x?utm_source=generator&theme=0" 
+            width="80%" height="352" 
+            frameborder="0" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+        </iframe>
+
+        <br><br><br><br>
+
+        <a href="index">return</a>
+    </p>
+</body>
+</html>
