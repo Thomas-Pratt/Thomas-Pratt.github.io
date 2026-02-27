@@ -26,14 +26,15 @@
             height: 100px;
         }
         pomo {
-           display: flex;
-           flex-direction: column;
-           align-items: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             width: 100%;
             justify-content: center;
-           min-height: 150px;
+            min-height: 150px;
             background: #7a81c5;
-           font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif;
+            border-radius: 12px;
         }
         #timeDisplay {
             font-size: 5rem;
@@ -128,7 +129,7 @@
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy">
         </iframe>
-
+        <br><br>
         <title>Pomodoro</title>
         <pomo>
           <div id="stars"></div>
@@ -155,7 +156,7 @@
             document.getElementById('stars').textContent += '⭐';
           }
           let endTime; // tracks when the timer should end
-          
+
           function startTimer() {
             endTime = Date.now() + time * 1000; // record the exact end time
             timer = setInterval(() => {
