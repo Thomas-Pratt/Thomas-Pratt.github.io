@@ -29,7 +29,7 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          width: 50%;
+          width: 100%;
           justify-content: center;
           min-height: 150px;
           background: #7a81c5;
@@ -142,21 +142,18 @@
               timeDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
             }
 
-            function startTimer() {
-              if (!timer) {
-                timer = setInterval(() => {
-                  if (time > 0) {
-                    time--;
-                    updateTime();
-                  } else {
-                    clearInterval(timer);
-                    timer = null;
-                    alert('Time is up!');
-                  }
-                }, 1000);
+           function toggleTimer() {
+             if (timer) {
+                 // it's running, so pause it
+                clearInterval(timer);
+                 timer = null;
+                startButton.textContent = 'Start';
+              } else {
+                // it's paused, so start it
+                startTimer();
+                startButton.textContent = 'Pause';
               }
             }
-
             function resetTimer() {
               clearInterval(timer);
               timer = null;
@@ -164,7 +161,7 @@
               updateTime();
             }
 
-            startButton.addEventListener('click', startTimer);
+            startButton.addEventListener('click', toggleTimer);
             resetButton.addEventListener('click', resetTimer);
 
             updateTime();
