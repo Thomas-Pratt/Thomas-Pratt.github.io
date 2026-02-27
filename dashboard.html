@@ -26,30 +26,36 @@
             height: 100px;
         }
         pomo {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 100%;
-          justify-content: center;
-          min-height: 150px;
-          background: #7a81c5;
-          font-family: Arial, sans-serif;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+            width: 100%;
+            justify-content: center;
+           min-height: 150px;
+            background: #7a81c5;
+           font-family: Arial, sans-serif;
         }
         #timeDisplay {
-          font-size: 5rem;
-          margin-bottom: 20px;
-          font-weight: 300;
-          letter-spacing: -2px;
+            font-size: 5rem;
+            margin-bottom: 20px;
+            font-weight: 300;
+            letter-spacing: -2px;
         }
         button {
-          padding: 10px 20px;
-          font-size: 1.2rem;
-          margin: 5px;
-          border: none;
-          border-radius: 5px;
-          background-color: #4CAF50;
-          color: white;
-          cursor: pointer;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        #stars {
+            font-size: 1.5rem;
+            letter-spacing: 4px;
+            min-height: 2rem;
+            color: white;
         }
 
     </style>
@@ -123,7 +129,7 @@
             loading="lazy">
         </iframe>
 
-        <title>Pomodoro</title> // pomo timer for studying.
+        <title>Pomodoro</title>
         <pomo>
           <div id="stars"></div>
           <div id="timeDisplay">25:00</div>
@@ -148,26 +154,31 @@
             sessions++;
             document.getElementById('stars').textContent += '⭐';
           }
+          let endTime; // tracks when the timer should end
+          
           function startTimer() {
+            endTime = Date.now() + time * 1000; // record the exact end time
             timer = setInterval(() => {
+              time = Math.round((endTime - Date.now()) / 1000); // calculate from real clock
               if (time > 0) {
-                time--;
                 updateTime();
               } else {
+                time = 0;
+                updateTime();
                 clearInterval(timer);
                 timer = null;
                 startButton.textContent = 'Start';
                 addStar();
               }
-            }, 1000);
+            }, 500); // check twice per second so it stays accurate
           }
-
           function toggleTimer() {
             if (timer) {
               clearInterval(timer);
               timer = null;
               startButton.textContent = 'Start';
             } else {
+              endTime = Date.now() + time * 1000; // recalculate from remaining time
               startTimer();
               startButton.textContent = 'Pause';
             }
